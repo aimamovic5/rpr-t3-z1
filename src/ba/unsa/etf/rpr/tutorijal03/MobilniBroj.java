@@ -2,8 +2,12 @@ package ba.unsa.etf.rpr.tutorijal03;
 
 public class MobilniBroj extends TelefonskiBroj {
     private String Broj;
-    private int MobilnaMreza;
+    private int mobilnaMreza;
 
+    MobilniBroj(int mobilnaMreza, String Broj) {
+        this.setMobilnaMreza(mobilnaMreza);
+        this.setBroj(Broj);
+    }
     public String getBroj() {
         return Broj;
     }
@@ -13,11 +17,11 @@ public class MobilniBroj extends TelefonskiBroj {
     }
 
     public int getMobilnaMreza() {
-        return MobilnaMreza;
+        return mobilnaMreza;
     }
 
     public void setMobilnaMreza(int mobilnaMreza) {
-        MobilnaMreza = mobilnaMreza;
+        this.mobilnaMreza = mobilnaMreza;
     }
 
     @Override
