@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-public interface TelefonskiBroj {
+public abstract class TelefonskiBroj {
     public abstract String ispisi();
-    abstract int hashCode();
+    public abstract int hashCode();
 }
