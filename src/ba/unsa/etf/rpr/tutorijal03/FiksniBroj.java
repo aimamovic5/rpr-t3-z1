@@ -16,4 +16,21 @@ public class FiksniBroj extends TelefonskiBroj {
     public int hashCode() {
         return 0;
     }
+    public String getBroj() {
+        return broj;
+    }
+
+    public void setBroj(String broj) {
+        this.broj = broj;
+    }
+
+    public Grad getGrad() {
+        return grad;
+    }
+
+    public void setGrad(Grad grad) {
+        this.grad = grad;
+    }
+
+
 }
