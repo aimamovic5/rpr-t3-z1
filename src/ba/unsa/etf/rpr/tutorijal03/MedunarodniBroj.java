@@ -24,4 +24,14 @@ public class MedunarodniBroj {
     public void setBroj(String broj) {
         Broj = broj;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new String(this.getDrzava().concat("/") + this.getBroj());
+    }
 }
