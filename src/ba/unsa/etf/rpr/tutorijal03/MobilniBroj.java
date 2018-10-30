@@ -26,7 +26,7 @@ public class MobilniBroj extends TelefonskiBroj {
 
     @Override
     public String ispisi() {
-        return null;
+        return new String("0" + Integer.toString(this.getMobilnaMreza()) + "/" + getBroj());
     }
 
     @Override
