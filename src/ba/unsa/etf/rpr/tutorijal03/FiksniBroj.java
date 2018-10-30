@@ -1,10 +1,20 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-public class FiksniBroj extends TelefonskiBroj {
+import java.security.cert.CertPathBuilderResult;
+
+public class FiksniBroj extends TelefonskiBroj implements Comparable {
     private Grad grad;
     private String broj;
-    enum Grad {
-        SARAJEVO, TUZLA, ZENICA, MOSTAR, BIHAĆ, BANJA_LUKA, TREBINJE, BRČKO, GORAŽDE, ŠIROKI_BRIJEG, ORAŠJE, LIVNO, BIJELJINA, PALE, TRAVNIK;
+
+    @Override
+    public int compareTo(Object o) {
+        if(o instanceof FiksniBroj)
+            return ispisi().compareTo(((FiksniBroj)o).ispisi());
+        return 0;
+    }
+
+    public enum Grad {
+        SARAJEVO, TUZLA, ZENICA, MOSTAR, BIHAC, BANJA_LUKA, TREBINJE, BRCKO, GORAZDE, SIROKI_BRIJEG, ORASJE, LIVNO, BIJELJINA, PALE, TRAVNIK;
     }
 
     @Override

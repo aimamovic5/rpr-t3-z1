@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.TreeSet;
 
 
 public class Imenik {
@@ -8,6 +9,8 @@ public class Imenik {
     public void dodaj(String ime, TelefonskiBroj broj) {
         this.imenik.put(ime, broj);
     }
+
+
     public String dajBroj(String ime) {
         var rezultat = (imenik.get(ime)).ispisi();
         return rezultat;
@@ -31,5 +34,24 @@ public class Imenik {
             }
         }
         return rezultat;
+    }
+    public Set<String> izGrada(FiksniBroj.Grad g) {
+        Set<String> set = new TreeSet();
+        for (String str : imenik.keySet()) {
+            if (imenik.get(str) instanceof FiksniBroj)
+                if (((FiksniBroj) imenik.get(str)).getGrad() == g)
+                    set.add(str);
+        }
+        return set;
+    }
+
+    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
+        Set<TelefonskiBroj> set = new TreeSet();
+        for (String str : imenik.keySet()) {
+            if (imenik.get(str) instanceof FiksniBroj)
+                if (((FiksniBroj) imenik.get(str)).getGrad() == g)
+                    set.add(imenik.get(str));
+        }
+        return set;
     }
 }
