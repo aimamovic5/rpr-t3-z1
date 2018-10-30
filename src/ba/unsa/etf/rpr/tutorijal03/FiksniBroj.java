@@ -19,14 +19,14 @@ public class FiksniBroj extends TelefonskiBroj implements Comparable {
 
     @Override
     public String ispisi() {
-        String broj = new String();
+        String num = new String();
         if (this.getGrad().equals(Grad.SARAJEVO))
-            broj = "033";
+            num = "033";
         if (this.getGrad().equals(Grad.TUZLA))
-            broj = "035";
+            num = "035";
         if (this.getGrad().equals(Grad.ZENICA))
-            broj = "032";
-        broj.concat("/" + broj);
+            num = "032";
+        num = num.concat("/" + broj);
         return broj;
     }
 
