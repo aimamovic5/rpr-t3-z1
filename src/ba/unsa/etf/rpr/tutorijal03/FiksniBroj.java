@@ -26,7 +26,7 @@ public class FiksniBroj extends TelefonskiBroj implements Comparable {
             num = "035";
         if (this.getGrad().equals(Grad.ZENICA))
             num = "032";
-        num = num.concat("/" + broj);
+        num = num + "/" + broj;
         return broj;
     }
 
