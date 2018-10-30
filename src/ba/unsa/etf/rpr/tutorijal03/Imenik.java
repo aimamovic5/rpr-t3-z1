@@ -20,4 +20,16 @@ public class Imenik {
         }
     return null;
     }
+    public String naSlovo(char s) {
+        String rezultat = new String();
+        int i = 1;
+        for (String str : imenik.keySet()) {
+            if(str.charAt(0) == s) {
+                rezultat.concat(Integer.toString(i) + ". " + str + " - " + imenik.get(str));
+                rezultat.concat(System.lineSeparator());
+                i++;
+            }
+        }
+        return rezultat;
+    }
 }
