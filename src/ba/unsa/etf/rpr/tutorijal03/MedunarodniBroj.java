@@ -4,6 +4,11 @@ public class MedunarodniBroj {
     private String Drzava;
     private String Broj;
 
+    public MedunarodniBroj(String drzava, String broj) {
+        this.setDrzava(drzava);
+        this.setBroj(broj);
+    }
+
     public String getDrzava() {
         return Drzava;
     }
