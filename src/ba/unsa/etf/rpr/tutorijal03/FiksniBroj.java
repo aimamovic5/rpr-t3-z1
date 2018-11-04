@@ -4,7 +4,6 @@ import java.security.cert.CertPathBuilderResult;
 
 public class FiksniBroj extends TelefonskiBroj implements Comparable {
     private Grad grad;
-    private String broj;
 
     @Override
     public int compareTo(Object o) {
@@ -20,33 +19,24 @@ public class FiksniBroj extends TelefonskiBroj implements Comparable {
     @Override
     public String ispisi() {
         String num = new String();
-        if (this.getGrad().equals(Grad.SARAJEVO))
+        if (this.getGrad() == Grad.SARAJEVO)
             num = "033";
         if (this.getGrad().equals(Grad.TUZLA))
             num = "035";
         if (this.getGrad().equals(Grad.ZENICA))
             num = "032";
-        num = num + "/" + broj;
-        return broj;
+        num = num + "/" + getBroj();
+        return num;
     }
 
     @Override
     public int hashCode() {
-        return 0;
-    }
-
-    public String getBroj() {
-        return broj;
+        return this.getGrad().hashCode();
     }
 
     public FiksniBroj(Grad grad, String broj) {
+        super(broj);
         this.setGrad(grad);
-        this.setBroj(broj);
-    }
-
-
-    public void setBroj(String broj) {
-        this.broj = broj;
     }
 
     public Grad getGrad() {

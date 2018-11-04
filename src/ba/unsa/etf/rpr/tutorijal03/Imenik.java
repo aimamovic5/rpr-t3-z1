@@ -28,8 +28,8 @@ public class Imenik {
         int i = 1;
         for (String str : imenik.keySet()) {
             if(str.charAt(0) == s) {
-                rezultat.concat(Integer.toString(i) + ". " + str + " - " + imenik.get(str));
-                rezultat.concat(System.lineSeparator());
+                rezultat = rezultat.concat( Integer.toString(i) + ". " + str + " - " + (this.imenik.get(str)).ispisi() );
+                rezultat = rezultat.concat( System.lineSeparator() );
                 i++;
             }
         }
@@ -49,7 +49,7 @@ public class Imenik {
         Set<TelefonskiBroj> set = new TreeSet();
         for (String str : imenik.keySet()) {
             if (imenik.get(str) instanceof FiksniBroj)
-                if (((FiksniBroj) imenik.get(str)).getGrad() == g)
+                if ((((FiksniBroj) imenik.get(str)).getGrad()).equals(g) )
                     set.add(imenik.get(str));
         }
         return set;

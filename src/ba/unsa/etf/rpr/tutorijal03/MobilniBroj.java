@@ -4,17 +4,11 @@ public class MobilniBroj extends TelefonskiBroj {
     private String Broj;
     private int mobilnaMreza;
 
-    MobilniBroj(int mobilnaMreza, String Broj) {
+    MobilniBroj(int mobilnaMreza, String broj) {
+        super(broj);
         this.setMobilnaMreza(mobilnaMreza);
-        this.setBroj(Broj);
-    }
-    public String getBroj() {
-        return Broj;
     }
 
-    public void setBroj(String broj) {
-        Broj = broj;
-    }
 
     public int getMobilnaMreza() {
         return mobilnaMreza;
